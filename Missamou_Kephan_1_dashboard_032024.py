@@ -25,8 +25,8 @@ def get_s3_file(bucket_name, s3_path, local_path):
     os.environ['MLFLOW_S3_ENDPOINT_URL'] = 'https://s3.amazonaws.com'
     load_dotenv()
     # Access AWS credentials from environment variables
-    os.environ['AWS_ACCESS_KEY_ID'] = st.secrets.aws.ACCESS_KEY
-    os.environ['AWS_SECRET_ACCESS_KEY'] = st.secrets.aws.SECRET_KEY
+    os.environ['AWS_ACCESS_KEY_ID'] = st.secrets.ACCESS_KEY
+    os.environ['AWS_SECRET_ACCESS_KEY'] = st.secrets.SECRET_KEY
     os.environ['AWS_DEFAULT_REGION'] = os.environ.get('AWS_DEFAULT_REGION', 'eu-north-1')
     s3_client = boto3.client(
         's3',
@@ -115,8 +115,8 @@ class Utils:
         load_dotenv()
         
         # Access AWS credentials from environment variables
-        os.environ['AWS_ACCESS_KEY_ID'] = st.secrets.aws.ACCESS_KEY
-        os.environ['AWS_SECRET_ACCESS_KEY'] = st.secrets.aws.SECRET_KEY
+        os.environ['AWS_ACCESS_KEY_ID'] = st.secrets.ACCESS_KEY
+        os.environ['AWS_SECRET_ACCESS_KEY'] = st.secrets.SECRET_KEY
         os.environ['AWS_DEFAULT_REGION'] = os.environ.get('AWS_DEFAULT_REGION', 'eu-north-1')
 
         # Define S3 bucket and key
