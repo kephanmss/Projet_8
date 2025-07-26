@@ -13,3 +13,5 @@ redacted.txt
 # Folders
 Data
 Preparation
+
+.streamlit/secrets.toml
